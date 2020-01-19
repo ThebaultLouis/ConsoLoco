@@ -25,7 +25,7 @@
       <div style="margin-top:75px"></div>
       <div class="text-center">
         <q-btn
-          to="/"
+          :to="{name: 'consumerHome'}"
           color="secondary"
           label="C'est parti"
           size="lg"

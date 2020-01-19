@@ -5,6 +5,22 @@ const routes = [
     children: [
       { path: '', component: () => import('pages/landingPage/LandingPage.vue') }
     ]
+  },
+  {
+    path: '/produits',
+    component: () => import('layouts/Consumer.vue'),
+    children: [
+      {
+        path: '',
+        component: () => import('pages/consumer/Home.vue'),
+        name: 'consumerHome'
+      },
+      {
+        path: 'details/:productId',
+        component: () => import('pages/consumer/ProductDetails.vue'),
+        name: 'consumerProductDetails'
+      }
+    ]
   }
   // {
   //   path: '/',
